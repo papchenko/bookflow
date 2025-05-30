@@ -1,0 +1,44 @@
+/*=============== GOOGLE FONTS ===============*/
+
+
+/*=============== VARIABLES CSS ===============*/
+
+/*========== Colors ==========*/
+
+/*========== Font family ==========*/
+
+/*========== Font sizes ==========*/
+
+/*========== Font weight ==========*/
+
+
+/* Responsive typography */
+
+
+/*=============== BASE ===============*/
+
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+
+
+/*=============== LAYOUT ===============*/
+
+
+/*=============== BREAKPOINTS ===============*/
+/* For large devices */
+@media screen and (max-width: 1208px) {}
+
+/* For medium devices */
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 768px) {}
+
+/* For small devices */
+@media screen and (max-width: 576px) {}
+
+@media screen and (max-width: 460px) {}
+
+
+
+
+

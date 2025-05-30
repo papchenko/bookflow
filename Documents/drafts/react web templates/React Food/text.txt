@@ -1,0 +1,138 @@
+<SectionTitle subtitle='' title={<></>} />
+
+========== NAVBAR ==========
+.button
+Book Now
+
+
+========== HOME ==========
+.home-subtitle
+Welcome To Restrou!
+
+.buttons
+About More
+Check Menu
+
+
+========== RESERVATION ==========
+.reservation-input
+Enter Name
+Enter Email
+Enter Phone
+
+const optionsGuest = [
+  { value: '', label: 'Choose Guest' },
+  { value: '1', label: '01' },
+  { value: '2', label: '02' },
+  { value: '3', label: '03' },
+  { value: '4', label: '04' },
+  { value: '5', label: '05' },
+];
+
+const optionsTiming = [
+  { value: '', label: 'Choose Time' },
+  { value: '1', label: '08:00 AM - 10:00 AM' },
+  { value: '2', label: '09:30 AM - 11:30 AM' },
+  { value: '3', label: '10:00 AM - 12:00 PM' },
+  { value: '4', label: '11:30 AM - 01:30 PM' },
+  { value: '5', label: '12:00 PM - 02:00 PM' },
+  { value: '6', label: '01:30 PM - 03:30 PM' },
+  { value: '7', label: '03:30 PM - 05:30 PM' },
+  { value: '8', label: '04:00 PM - 06:00 PM' },
+  { value: '9', label: '05:30 PM - 07:30 PM' },
+];
+
+.button
+Book Now
+
+
+========== ABOUT ==========
+.section-title
+We Are Always Here To Serve You Fresh Food
+
+.section-subtitle
+About Us
+
+.about-description
+There are many variations of passages available but the majority have suffered alteration in some form by injected humour randomised words look even. Many desktop packages and web page editors now their default model text.
+
+.data-title | .data-description
+Best Quality Food
+It is a long established fact by the layout.
+
+Delicious Food
+
+.button
+Check Menu
+
+
+========== MENU ==========
+.section-title
+Let's Check Our Menu
+
+.section-subtitle
+Our Menu
+
+
+========== GALLERY ==========
+.section-title
+Let's Check Our Photo Gallery
+
+.section-subtitle
+Our Photo Gallery
+
+
+========== TESTIMONIALS ==========
+.section-title
+What Our Awesome Clients Say About Us
+
+.section-subtitle
+Testimonials
+
+
+========== FOOTER ==========
+.footer-description
+We are many variations of passages available but the majority have suffered alteration some form by injected humour words believable.
+
+.footer-newsletter
+Subscribe Our Newsletter
+
+.footer-input
+Your Email
+
+.button
+Subscribe
+
+.footer-title
+Quick Links
+Opening Hours
+Get In Touch
+
+.footer-opening
+Week
+09:00 AM - 20:00 PM
+
+Sun
+09:30 AM - 21:00 PM
+
+Mon
+10:00 AM - 22:00 PM
+
+Tue
+10:30 AM - 21:00 PM
+
+Sat
+Closed
+
+.footer-subtitle | .footer-info
+Our Address
+25/AB Milford Road, New York, USA
+
+Call Us
++2 123 654 7898
+
+Mail Us
+info@example.com
+
+.footer-copy
+&#169; Copyright 2025 <span className='closed'>Restrou</span> All Rights Reserved.
