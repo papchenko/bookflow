@@ -1,0 +1,96 @@
+.logo-img {
+  width: 100px;
+}
+.search-bar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    border: 1px solid var(--border-color);
+    border-radius: 25px;
+    background-color: var(--card-bg);
+    background-color: transparent !important;
+    padding: 0.5rem 0.75rem 0.5rem 1.25rem;
+    flex-grow: 0.6;
+    max-width: 480px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.search-bar:focus-within {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.25);
+    background-color: var(--bg-color);
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    background: transparent;
+    flex-grow: 1;
+    font-family: var(--font-secondary);
+    color: var(--text-color);
+    padding: 0.1rem 2.8rem 0.1rem 0;
+    width: 100%;
+}
+
+.search-bar input::placeholder {
+    color: var(--text-color);
+    opacity: 0.55;
+    font-style: normal;
+}
+
+.search-bar button {
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.search-bar button:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-50%) scale(1.05);
+}
+
+.search-bar button:active {
+    background-color: var(--secondary-color);
+    transform: translateY(-50%) scale(0.95);
+}
+
+@media (max-width: 768px) {
+    .logo-img {
+    width: 67px;
+  }
+    .search-bar {
+        width: 100%;
+        margin: 0 auto;
+        height: 38px;
+        margin-top: 1.6rem;
+        margin-bottom: 0rem;
+        max-width: none;
+        position: relative;
+        background-color: var(--header-bg);
+        button {
+            width: 42px;
+            height: 26px;
+            border-radius: 12px;
+        }
+        ::placeholder {
+            font-size: 0.9rem;
+        }
+    }
+    .fas {
+        font-size: 0.9rem;
+    }
+}
