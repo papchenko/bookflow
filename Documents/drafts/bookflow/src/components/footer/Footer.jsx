@@ -82,7 +82,7 @@ const Footer = () => {
           <div>
             <img src={logoImg} alt="Logo" className="w-10 mb-3 dark:invert" />
             <h3 className={`font-semibold text-lg mb-3 ${textColor}`}>
-              Landing Books
+              Sale and Lending of Books
             </h3>
             <p className={`${textColor} text-sm leading-relaxed`}>
               A platform for discovering, sharing and exploring books.

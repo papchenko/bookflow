@@ -25,31 +25,37 @@ export const CartProvider = ({ children }) => {
     setCart(newCart);
   };
 
-const addToCart = (product, type = 'book') => {
-  const exists = cart.find(item => item.id === product.id && item.purchaseType === 'full');
-  if (exists) {
-    toast.error('Item already in cart');
-    return;
-  }
+  const addToCart = (product) => {
+    const type = product.type || "book";
 
-  const newItem = {
-    id: product.id,
-    name: product.name,
-    type,
-    quantity: 1,
-    price: Number(product.price || 0),
-    priceLending: Number(product.priceLending || 0),
-    image: type === 'book' ? product.images?.[0] : product.image,
-    purchaseType: 'full',
-    sellerId: product.sellerId || null,
-    sellerName: product.sellerName || null,
-    sellerPhoto: product.sellerPhoto || null
+    const exists = cart.find(
+      item => item.id === product.id && item.purchaseType === 'full'
+    );
+
+    if (exists) {
+      toast.error('Item already in cart');
+      return;
+    }
+
+    const newItem = {
+      id: product.id,
+      name: product.name,
+      type,
+      quantity: 1,
+      price: Number(product.price || 0),
+      priceLending: Number(product.priceLending || 0),
+      image: type === 'book'
+        ? product.images?.[0]
+        : product.image,
+      purchaseType: 'full',
+      sellerId: product.sellerId || null,
+      sellerName: product.sellerName || null,
+      sellerPhoto: product.sellerPhoto || null
+    };
+
+    saveCart([...cart, newItem]);
+    toast.success('Added to cart');
   };
-
-  saveCart([...cart, newItem]);
-  toast.success('Added to cart');
-};
-
 
   const removeFromCart = (id) => {
     saveCart(cart.filter(item => item.id !== id));

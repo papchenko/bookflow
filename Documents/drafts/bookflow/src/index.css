@@ -80,3 +80,16 @@ body {
 .animate-fadeIn {
   animation: fadeIn 0.2s ease-out;
 }
+
+.swiper-pagination-bullet {
+  width: 10px !important;
+  height: 10px !important;
+  background-color: #007bff !important;
+  opacity: 0.5 !important;
+  transition: 0.3s !important;
+}
+.swiper-pagination-bullet-active {
+  width: 22px !important;
+  border-radius: 8px !important;
+  opacity: 1 !important;
+}

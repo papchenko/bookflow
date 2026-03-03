@@ -9,6 +9,7 @@ import { collection, query, orderBy, limit, getDocs } from "firebase/firestore";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import ShopProductModal from "./ShopProductModal";
 import "swiper/css";
 import "swiper/css/navigation";
 
@@ -17,6 +18,7 @@ const Home = () => {
   const [latestBooks, setLatestBooks] = useState([]);
   const [itemsToShow, setItemsToShow] = useState(4);
   const [selectedBook, setSelectedBook] = useState(null);
+  const [selectedShopProduct, setSelectedShopProduct] = useState(null);
 
   const { addToCart } = useCart();
 
@@ -88,14 +90,11 @@ const Home = () => {
         <div className="absolute inset-0 flex">
         </div>
         <div className="w-full px-4 text-center max-w-7xl z-10">
-          {/* <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-gray-800 dark:text-white"> */}
           <h1 className="text-5xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 text-gray-800 dark:text-white">
             Share Knowledge, Inspire Others
           </h1>
-          {/* <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-12 max-w-3xl mx-auto text-gray-800 dark:text-white"> */}
           <p className="text-xl sm:text-xl md:text-2xl lg:text-3xl mb-12 max-w-3xl mx-auto text-gray-800 dark:text-white">
-            Here you can sell books, lend them for free, or use them as
-                  collateral — instead of letting them gather dust on your shelf.
+            Here you can sell books, lend them as collateral — instead of letting them gather dust on your shelf.
           </p>
           <Link to="/books" className="bg-[var(--secondary-color)] hover:bg-[var(--secondary-color-hover)] py-4 px-9 sm:py-4 sm:px-10 rounded-full font-bold transition duration-300 text-sm sm:text-base md:text-lg">
             Explore Library
@@ -120,7 +119,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
       {/* Promotional Section */}
       <section className="py-12 bg-gradient-to-br
         from-[#e0f2fe]
@@ -141,7 +139,6 @@ const Home = () => {
           </p>
           <Link
             to="/takers-premium"
-            // bg-yellow-400 hover:bg-yellow-500
             className="inline-block bg-[var(--secondary-color)] hover:bg-[var(--secondary-color-hover)] text-white font-bold py-2 px-6 rounded-full transition duration-300">
             View Details
           </Link>
@@ -157,36 +154,29 @@ const Home = () => {
 
           <Swiper
             modules={[Autoplay, Navigation]}
-            spaceBetween={20}
             slidesPerView={2}
+            spaceBetween={10}
             loop={true}
             autoplay={{ delay: 2500, disableOnInteraction: false }}
-            onSwiper={(swiper) => (swiperRef.current = swiper)}
-            breakpoints={{
-              640: { slidesPerView: 2 },
-              768: { slidesPerView: 3 },
-              1024: { slidesPerView: 3 },
-              1280: { slidesPerView: 3 },
-            }}>
+            onSwiper={(swiper) => (swiperRef.current = swiper)}>
             {shop.map((item) => (
               <SwiperSlide key={item.id}>
-                <div className="
+                <div
+                  onClick={() => setSelectedShopProduct(item)}
+                  className="cursor-pointer
                     bg-white
                     dark:bg-gray-700
-
                     border border-slate-200
                     dark:border-gray-600
-
                     shadow-sm
                     hover:shadow-xl
-
                     hover:-translate-y-1
                     transition-all duration-300
-
                     p-5
                     rounded-2xl
                     flex flex-col items-center text-center
-                  ">
+                  "
+                >
                   <img
                     src={item.image}
                     alt={item.name}
@@ -199,11 +189,22 @@ const Home = () => {
                     UAH {item.price}
                   </p>
                   <p className="text-gray-500 dark:text-gray-300 text-sm mb-3">
-                    {item.description}
+                    {item.title}
                   </p>
                   <button
-                    onClick={() => addToCart(item, "shop")}
-                    className="bg-[var(--secondary-color)] hover:bg-[var(--secondary-color-hover)] text-white px-4 py-2 rounded-full transition duration-300">
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      addToCart({
+                        id: item.id,
+                        name: item.name,
+                        price: item.price,
+                        type: "shop",
+                        quantity: 1,
+                        image: item.image,
+                      });
+                    }}
+                    className="bg-[var(--secondary-color)] hover:bg-[var(--secondary-color-hover)] text-white px-4 py-2 rounded-full transition duration-300"
+                  >
                     Buy
                   </button>
                 </div>
@@ -227,6 +228,12 @@ const Home = () => {
         <ProductModal
           book={selectedBook}
           onClose={() => setSelectedBook(null)}
+        />
+      )}
+      {selectedShopProduct && (
+        <ShopProductModal
+          product={selectedShopProduct}
+          onClose={() => setSelectedShopProduct(null)}
         />
       )}
     </div>

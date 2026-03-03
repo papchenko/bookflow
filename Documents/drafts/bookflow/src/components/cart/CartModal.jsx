@@ -118,7 +118,7 @@ const CartModal = () => {
                   className="flex items-center gap-4 p-3 border-b"
                 >
                   <img
-                    src={item.image}
+                    src={item.image || (item.images && item.images[0])}
                     alt={item.name}
                     className="w-16 h-16 object-cover rounded-md"
                   />

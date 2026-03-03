@@ -54,7 +54,7 @@ const Takers = () => {
       <div className="max-w-7xl mx-auto">
         {" "}
         <h2 className="text-2xl font-bold mb-6 text-gray-800 dark:text-white">
-          All Takers
+          Takers
         </h2>{" "}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mx-4 md:mx-0">
           {" "}

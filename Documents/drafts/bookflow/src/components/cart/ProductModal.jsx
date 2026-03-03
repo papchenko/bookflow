@@ -111,6 +111,7 @@ const ProductModal = ({ book, onClose }) => {
               modules={[Navigation, Pagination]}
               spaceBetween={10}
               slidesPerView={1}
+              loop
               pagination={{ clickable: true }}
               navigation={{
                 prevEl: prevRef.current,

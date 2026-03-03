@@ -44,7 +44,7 @@ const ProductCard = ({ product, onClick }) => {
         {product.priceLending && (
           <>
             <span className="text-xs text-gray-800 dark:text-white">Lending price:</span>
-            <p className="text-green-600 dark:text-green-500 font-bold">
+            <p className="text-green-600 dark:text-green-500 font-bold pb-2">
               UAH {Number(product.priceLending).toFixed(2)}
               {product.unit && <span className="text-sm text-gray-500 dark:text-gray-400 ml-1">{product.unit}</span>}
             </p>
