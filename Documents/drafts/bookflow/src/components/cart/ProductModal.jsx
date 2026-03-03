@@ -162,11 +162,11 @@ const ProductModal = ({ book, onClose }) => {
             </h2>
             {book.author && <p className="text-gray-700 dark:text-gray-300 mb-1">{book.author}</p>}
             {book.year && <p className="text-gray-500 dark:text-gray-400 text-sm mb-1">{book.year}</p>}
-            <p className="text-base font-bold mb-1 text-gray-800 dark:text-white">Selling price: {book.price} UAH</p>
+            <p className="text-base font-bold mb-1 text-gray-800 dark:text-white">Selling price: {book.price} ₴</p>
             {book.priceLending && (
               <div className="relative mb-2 inline-block">
                 <p className="text-green-600 dark:text-green-500 font-bold text-base flex items-center gap-2">
-                  Lending price: {Number(book.priceLending).toFixed(2)} UAH
+                  Lending price: {Number(book.priceLending).toFixed(2)} ₴
 
                   <FaQuestionCircle
                     className="text-base cursor-pointer text-gray-500 hover:text-[var(--secondary-color)] transition"

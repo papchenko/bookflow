@@ -90,7 +90,7 @@ const GetTakersPremiumPayment = () => {
             Premium Order
             Order: ${orderNumber}
             Product: ${product.name}
-            Price: ${product.price}₴
+            Price: ${product.price} ₴
             Customer: ${formData.lastName} ${formData.firstName}
             Email: ${formData.email}
             Phone: ${formData.phone}
@@ -235,7 +235,7 @@ const GetTakersPremiumPayment = () => {
                 onClick={()=>{navigator.clipboard.writeText(orderNumber);toast.success("Copied!");}}/>
             </p>
             <p><b>Product:</b> {product.name}</p>
-            <p><b>Price:</b> {product.price}₴</p>
+            <p><b>Price:</b> {product.price} ₴</p>
 
             <div className="bg-gray-100 p-4 rounded text-center">
               <p className="font-bold uppercase text-red-600">MANDATORY FOR PAYMENT!</p>
@@ -252,14 +252,14 @@ const GetTakersPremiumPayment = () => {
               <p className="font-bold">Importantly!</p>
               <p>We received a message about your premium purchase.</p>
               <p className="font-bold text-green-600">
-                Pay {product.price} UAH to the card above.
+                Pay {product.price} (₴ / UAH) to the card above.
               </p>
               <p>After payment, administrators will activate your premium.</p>
             </div>
 
             <button onClick={handleFinalConfirm}
               className="bg-green-600 text-white py-3 rounded">
-              I paid {product.price}₴ and added order number in description
+              I paid {product.price} ₴ and added order number in description
             </button>
           </div>
         )}
@@ -270,7 +270,7 @@ const GetTakersPremiumPayment = () => {
             <h3 className="text-xl font-bold mb-4">Receipt</h3>
             <p><b>Order Number:</b> {orderNumber}</p>
             <p><b>Product:</b> {product.name}</p>
-            <p><b>Price:</b> {product.price}₴</p>
+            <p><b>Price:</b> {product.price} ₴</p>
             <p><b>Customer:</b> {formData.lastName} {formData.firstName}</p>
             <p><b>Email:</b> {formData.email}</p>
             <p><b>Phone:</b> {formData.phone}</p>

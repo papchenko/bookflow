@@ -128,7 +128,7 @@ const CartModal = () => {
                       {item.name}
                     </h3>
                     <p className="text-green-600 font-bold">
-                      UAH {Number(item.purchaseType === 'full' ? item.price : item.priceLending).toFixed(2)}
+                      {Number(item.purchaseType === 'full' ? item.price : item.priceLending).toFixed(2)} ₴
                     </p>
                   </div>
 
@@ -198,7 +198,7 @@ const CartModal = () => {
             <div className="flex justify-between mb-4">
               <span className="font-medium text-gray-700 dark:text-gray-300">Subtotal:</span>
               <span className="font-medium text-gray-700 dark:text-gray-300">
-                UAH {subtotal.toFixed(2)}
+                {subtotal.toFixed(2)} ₴
               </span>
             </div>
 

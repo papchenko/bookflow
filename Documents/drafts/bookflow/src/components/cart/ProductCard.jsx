@@ -39,13 +39,13 @@ const ProductCard = ({ product, onClick }) => {
       <div className="p-4 flex flex-col flex-1">
         <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-1">{product.name}</h3>
         <p className="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-1">Genre: {product.genre}</p>
-        <p className="text-base font-bold text-gray-800 dark:text-white mb-1">UAH {product.price}</p>
+        <p className="text-base font-bold text-gray-800 dark:text-white mb-1">{product.price} ₴</p>
 
         {product.priceLending && (
           <>
             <span className="text-xs text-gray-800 dark:text-white">Lending price:</span>
             <p className="text-green-600 dark:text-green-500 font-bold pb-2">
-              UAH {Number(product.priceLending).toFixed(2)}
+              {Number(product.priceLending).toFixed(2)} ₴
               {product.unit && <span className="text-sm text-gray-500 dark:text-gray-400 ml-1">{product.unit}</span>}
             </p>
           </>

@@ -116,7 +116,7 @@ const CreatePostForm = ({ onClose }) => {
           </select>
 
           <input placeholder="Year" type="number" value={year} onChange={e => setYear(e.target.value)} className="w-full p-2 border rounded"/>
-          <input placeholder="Price (UAH)" type="number" value={price} onChange={e => setPrice(e.target.value)} className="w-full p-2 border rounded"/>
+          <input placeholder="Price (₴ / UAH)" type="number" value={price} onChange={e => setPrice(e.target.value)} className="w-full p-2 border rounded"/>
           <input placeholder="Lending Price" type="number" value={priceLending} onChange={e => setPriceLending(e.target.value)} className="w-full p-2 border rounded"/>
           <input placeholder="Unit" value={unit} onChange={e => setUnit(e.target.value)} className="w-full p-2 border rounded"/>
           <textarea placeholder="Description" value={description} onChange={e => setDescription(e.target.value)} className="w-full p-2 border rounded"/>

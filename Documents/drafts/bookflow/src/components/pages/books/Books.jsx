@@ -217,13 +217,13 @@ useEffect(() => {
                 <div className="p-4">
                   <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-1">{book.name}</h3>
                   <p className="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-1">Genre: {book.genre}</p>
-                  <p className="text-base font-bold text-grey-400 dark:text-white mb-1">UAH {book.price}</p>
+                  <p className="text-base font-bold text-grey-400 dark:text-white mb-1">{book.price} ₴</p>
 
                   {book.priceLending && (
                     <>
                       <span className="text-xs text-gray-800 dark:text-white">Lending price:</span>
                       <p className="text-green-600 dark:text-green-500 font-bold">
-                        UAH {Number(book.priceLending).toFixed(2)}
+                        {Number(book.priceLending).toFixed(2)} ₴
                         {book.unit && <span className="text-sm text-gray-500 dark:text-gray-400 ml-1">{book.unit}</span>}
                       </p>
                     </>

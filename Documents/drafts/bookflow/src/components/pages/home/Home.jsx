@@ -186,7 +186,7 @@ const Home = () => {
                     {item.name}
                   </h3>
                   <p className="text-green-600 dark:text-green-400 font-bold mb-1">
-                    UAH {item.price}
+                    {item.price} ₴
                   </p>
                   <p className="text-gray-500 dark:text-gray-300 text-sm mb-3">
                     {item.title}

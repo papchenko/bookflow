@@ -69,7 +69,7 @@ const ShopProductModal = ({ product, onClose }) => {
             </h2>
 
             <p className="text-green-600 dark:text-green-400 font-bold text-xl mb-1">
-              UAH {product.price}
+              {product.price} ₴
             </p>
             <p className="text-gray-700 dark:text-gray-300 mb-2">
               {product.title}

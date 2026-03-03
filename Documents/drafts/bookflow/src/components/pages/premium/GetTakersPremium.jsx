@@ -43,7 +43,7 @@ const GetTakersPremium = () => {
           <li><span className="bg-green-400">✔</span> Visible in Takers page</li>
         </ul>
 
-        <div className="text-3xl font-bold mb-6">UAH 99</div>
+        <div className="text-3xl font-bold mb-6">99 ₴</div>
 
         <button
           onClick={handleBuyPremium}
