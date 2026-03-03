@@ -41,9 +41,29 @@ const Books = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  useEffect(() => {
+//   useEffect(() => {
+//   const params = new URLSearchParams(location.search);
+//   const bookId = params.get("bookId");
+
+//   if (bookId) {
+//     const fetchBook = async () => {
+//       const snap = await getDoc(doc(db, "books", bookId));
+//       if (snap.exists()) {
+//         setSelectedBook({ id: snap.id, ...snap.data() });
+//       }
+//     };
+
+//     fetchBook();
+//   }
+// }, [location.search]);
+useEffect(() => {
   const params = new URLSearchParams(location.search);
   const bookId = params.get("bookId");
+  const genre = params.get("genre");
+
+  if (genre && GENRES.includes(genre)) {
+    setGenreFilter(genre);
+  }
 
   if (bookId) {
     const fetchBook = async () => {

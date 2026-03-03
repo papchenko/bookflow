@@ -114,19 +114,22 @@ const GlobalSearch = () => {
       navigate(`/takers/${item.id}`);
     }
 
+    // if (item.type === "genre") {
+    //   const q = query(
+    //     collection(db, "books"),
+    //     where("genre", "==", item.name)
+    //   );
+
+    //   const snap = await getDocs(q);
+
+    //   if (!snap.empty) {
+    //     navigate(`/books?genre=${item.name}`);
+    //   } else {
+    //     toast.info("No books with this genre");
+    //   }
+    // }
     if (item.type === "genre") {
-      const q = query(
-        collection(db, "books"),
-        where("genre", "==", item.name)
-      );
-
-      const snap = await getDocs(q);
-
-      if (!snap.empty) {
-        navigate(`/books?genre=${item.name}`);
-      } else {
-        toast.info("No books with this genre");
-      }
+      navigate(`/books?genre=${encodeURIComponent(item.name)}`);
     }
 
     clearSearch();
