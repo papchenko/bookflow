@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useTheme } from '../../../context/ThemeContext';
 import logoImg from '../../../assets/logo.svg';
-import authorImg from '../../../assets/author.png';
+import authorImg from '../../../assets/author.svg';
 import { FaCheck, FaChevronDown } from "react-icons/fa6";
 
 const About = () => {
@@ -85,13 +85,13 @@ const About = () => {
       </section>
 
       {/* Version Section */}
-      <section className={`py-0`}>
+      <section className={`py-0 pt-10 border-t ${borderColor} dark:border-gray`}>
       <div className="container mx-auto px-4 max-w-4xl flex flex-col md:flex-row items-center md:items-start gap-6">
           <p className={`${textColor} px-4 pb-1 text-sm`}>
             Stable version 1.1.1
           </p>
           <p className={`${textColor} px-4 pb-1 text-sm`}>
-            Release 110_10 (2026-02-03)
+            Release 110_10
           </p>
         <div className="">
           <div
