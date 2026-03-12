@@ -1,0 +1,32 @@
+| Tailwind  | px   |
+| --------- | ---- |
+| text-xs   | 12px |
+| text-sm   | 14px |
+| text-base | 16px |
+| text-lg   | 18px |
+| text-xl   | 20px |
+| text-2xl  | 24px |
+| text-3xl  | 30px |
+| text-4xl  | 36px |
+
+bg-[var(--some-color)]
+
+sm:	640px	@media (min-width: 640px)
+md:	768px	@media (min-width: 768px)
+lg:	1024px	@media (min-width: 1024px)
+xl:	1280px	@media (min-width: 1280px)
+2xl: 1536px	@media (min-width: 1536px)
+
+width: 350px;
+height: auto;
+border-radius: 50%; -> w-[350px] h-auto rounded-full або w-56 md:w-80 h-auto rounded-full
+
+justify-between
+justify-around
+justify-start
+justify-center
+justify-end
+
+items-center
+justify-self-center
+self-center

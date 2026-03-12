@@ -18,12 +18,12 @@ BookFlow is a platform for discovering, sharing, selling, and lending books. Ins
 
 ## 🛠 Technologies Used
 
-- **Frontend**: React.js, Tailwind CSS  
+- **Frontend**: React.js, Redux.js, Tailwind CSS  
 - **State Management**: React Hooks  
 - **Routing**: React Router DOM  
 - **Forms & Notifications**: React Toastify  
 - **Animations & Interactions**: Swiper.js for carousels  
-- **Backend / API**: EmailJS for contact forms  
+- **Backend / API**: Firebase, Supabase, EmailJS for contact forms  
 - **Build Tools**: Vite  
 
 ---

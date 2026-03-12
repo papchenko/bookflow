@@ -1,0 +1,140 @@
+У терміналі в корені проєкту (або зроби папку certs):
+
+mkdir certs
+cd certs
+
+# Генеруємо приватний ключ
+openssl genrsa -out key.pem 2048
+
+# Генеруємо сертифікат (дійсний 365 днів)
+openssl req -new -x509 -key key.pem -out cert.pem -days 365
+
+При генерації openssl буде питати кілька полів — можна залишити порожні, але для CN (Common Name) введи: localhost
+
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import fs from 'fs'
+
+export default defineConfig({
+  plugins: [react()],
+  server: {
+    https: {
+      key: fs.readFileSync('./certs/key.pem'),
+      cert: fs.readFileSync('./certs/cert.pem'),
+    },
+    host: '0.0.0.0',
+    port: 5173
+  }
+})
+//========================================================================================================================================================
+dependencies
+npm install \
+react-icons \
+react-router-dom \
+swiper \
+react-toastify
+
+bootstrap or tailwind?
+
+bootstrap \
+react-bootstrap \
+
+styles
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'react-toastify/dist/ReactToastify.css';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+//========================================================================================================================================================
+git remote -v
+
+git add .
+git commit -m ""
+git push
+npm run deploy
+
+git add . && git commit -m "" && git push origin main && npm run deploy
+---------
+BookFlow
+# Перейти у папку проекту
+cd path/to/bookflow
+
+# Підтягнути останні зміни з main (щоб уникнути конфліктів)
+git pull --rebase origin main
+
+# Додати всі свої зміни
+git add .
+
+# Закомітити зміни з описом
+git commit -m "Опис змін"
+
+# Запушити в main
+git push origin main
+
+# Збудувати production версію
+npm run build
+
+# Задеплоїти на gh-pages
+npx gh-pages -d dist -b gh-pages -r git@github.com:papchenko/bookflow.git
+---------
+# Перейти у папку проекту
+cd path/to/recruns
+
+# Підтягнути останні зміни з main
+git pull --rebase origin main
+
+# Додати всі свої зміни
+git add .
+
+# Закомітити зміни з описом
+git commit -m "Опис змін"
+
+# Запушити в main
+git push origin main
+
+# Збудувати production версію
+npm run build
+
+# Задеплоїти на gh-pages
+npx gh-pages -d dist -b gh-pages -r git@github.com:papchenko/recruns.git
+---------
+# Перейти у папку проекту
+cd path/to/canyoufind
+
+# Підтягнути останні зміни з main
+git pull --rebase origin main
+
+# Додати всі свої зміни
+git add .
+
+# Закомітити зміни з описом
+git commit -m "Опис змін"
+
+# Запушити в main
+git push origin main
+
+# Збудувати production версію
+npm run build
+
+# Задеплоїти на gh-pages
+npx gh-pages -d dist -b gh-pages -r git@github.com:papchenko/canyoufind.git
+---------
+//========================================================================================================================================================
+npm install -D tailwindcss @tailwindcss/vite
+
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
+
+export default defineConfig({
+  plugins: [
+    react(),
+    tailwindcss(),
+  ],
+})
+
+src/index.css
+@import "tailwindcss";
+
+restart server
+//========================================================================================================================================================
