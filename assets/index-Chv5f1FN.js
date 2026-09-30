@@ -3364,12 +3364,10 @@ This typically indicates that your device does not have a healthy Internet conne
               flex flex-col justify-center items-center
               text-center text-white
               bg-gradient-to-br
-              from-[#e0f2fe]
-              via-[#bae6fd]
-              to-[#7dd3fc]
-              dark:from-[#111018]
-              dark:via-[#1b1a2b]
-              dark:to-[#1c2a3a]
+                from-[#e0f2fe]
+                via-[#bae6fd]
+                to-[#fff]
+              dark:bg-[linear-gradient(135deg,#080b14_0%,#111a29_35%,#1b2737_68%,#1f2937_100%)]
             `,children:u.jsxs("div",{className:"px-4 max-w-7xl",children:[u.jsx("h1",{className:`
                   text-5xl sm:text-5xl md:text-6xl lg:text-7xl
                   font-bold mb-4
@@ -3390,13 +3388,10 @@ This typically indicates that your device does not have a healthy Internet conne
               flex flex-col justify-center items-center
               text-center
               bg-gradient-to-br
-              from-[#e0f2fe]
-              via-[#bae6fd]
-              to-[#7dd3fc]
-              dark:from-[#111018]
-              dark:via-[#1b1a2b]
-              dark:to-[#1c2a3a]
-              dark:text-white
+                from-[#e0f2fe]
+                via-[#bae6fd]
+                to-[#fff]
+              dark:bg-[linear-gradient(135deg,#080b14_0%,#111a29_35%,#1b2737_68%,#1f2937_100%)]
             `,children:u.jsxs("div",{className:"px-4 max-w-4xl",children:[u.jsx("div",{className:`
                   flex flex-col items-center
                   gap-1 justify-center
