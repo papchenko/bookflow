@@ -3554,8 +3554,6 @@ This typically indicates that your device does not have a healthy Internet conne
   `,children:[o.jsxs("div",{className:`
           relative
           h-64
-          bg-gray-100
-          dark:bg-gray-900
           p-3
           overflow-hidden
         `,children:[o.jsxs("div",{className:`
@@ -4846,7 +4844,6 @@ This typically indicates that your device does not have a healthy Internet conne
                     `,children:[o.jsxs("div",{className:`
                       relative
                       h-64
-                      
                       p-3
                       overflow-hidden
                     `,children:[o.jsxs("div",{className:`
